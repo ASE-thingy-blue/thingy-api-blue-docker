@@ -16,4 +16,7 @@ EXPOSE 8080
 
 RUN ["chmod", "+x", "/usr/src/app/startup.sh"]
 
+# Drop privileges according to Docker and Node.js Best Practices (https://github.com/nodejs/docker-node/blob/master/docs/BestPractices.md)
+USER node
+
 CMD ["/usr/src/app/startup.sh"]

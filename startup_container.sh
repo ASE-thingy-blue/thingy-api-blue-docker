@@ -1,12 +1,12 @@
 #!/bin/bash
-#pulls new code from github
+# Pull current code base from Github
 git clone https://github.com/ASE-thingy-blue/thingy-api-blue.git
 
-#moves to the project folder
+# Navigate to the project folder
 cd thingy-api-blue
 
-#installs all dependencies
+# Install all dependencies
 npm install --save-dev
 
-#starting the node server
+# Start the node server
 node . -prod
