@@ -9,4 +9,4 @@ cd thingy-api-blue
 npm install --save-dev
 
 # Start the node server
-node . -prod
+node .
