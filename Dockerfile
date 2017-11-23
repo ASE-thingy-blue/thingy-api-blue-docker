@@ -17,7 +17,7 @@ RUN git clone https://github.com/ASE-thingy-blue/thingy-api-blue.git
 WORKDIR $appdir/thingy-api-blue
 
 # Install all dependencies
-RUN npm install --save-dev
+RUN npm install
 
 EXPOSE 8080
 
