@@ -7,8 +7,7 @@ RUN mkdir -p $appdir
 WORKDIR $appdir
 
 # Combine RUN apt-get update with apt-get install in the same RUN statement to avoid caching issues (https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/)
-RUN apt-get update
-RUN apt-get install -y git build-essential
+RUN apt-get update && apt-get install -y git build-essential
 RUN apt-get clean
 
 # Pull current code base from Github
