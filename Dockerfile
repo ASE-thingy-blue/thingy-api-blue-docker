@@ -10,15 +10,9 @@ WORKDIR $appdir
 RUN apt-get update && apt-get install -y git build-essential
 RUN apt-get clean
 
-# Pull current code base from Github
-RUN git clone https://github.com/ASE-thingy-blue/thingy-api-blue.git
+COPY startup_container.sh startup.sh
 
-# Navigate to the project folder
-WORKDIR $appdir/thingy-api-blue
-
-# Install all dependencies
-RUN npm install -g node-gyp
-RUN npm install
+RUN ["chmod", "+x", "/usr/src/app/startup.sh"]
 
 EXPOSE 8080
 
@@ -26,4 +20,4 @@ EXPOSE 8080
 USER node
 
 # Start the node server
-CMD ["node", "."]
+CMD ["/usr/src/app/startup.sh"]
