@@ -1,8 +1,6 @@
 #!/bin/bash
 
-#clean all:
-rm -rf /usr/src/app/
-mkdir /usr/src/app/
+# Open app directory:
 cd /usr/src/app/
 
 # Pull current code base from Github

@@ -3,6 +3,7 @@ FROM node:8.7
 MAINTAINER salim@hermidas.ch
 
 ENV appdir /usr/src/app/
+ENV rm -rf /usr/src/app/
 RUN mkdir -p $appdir
 WORKDIR $appdir
 
@@ -20,7 +21,7 @@ RUN ["chmod", "+x", "/usr/src/app/startup.sh"]
 EXPOSE 8080
 
 # Drop privileges according to Docker and Node.js Best Practices (https://github.com/nodejs/docker-node/blob/master/docs/BestPractices.md)
-USER node
+#USER node
 
 # Start the node server
 ENTRYPOINT ["/usr/src/app/startup.sh"]
