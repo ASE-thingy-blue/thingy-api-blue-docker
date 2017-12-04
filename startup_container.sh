@@ -11,7 +11,6 @@ git remote add origin https://github.com/ASE-thingy-blue/thingy-api-blue.git
 git pull origin master
 
 # Install all dependencies
-npm install -g node-gyp
 npm install
 
 # Start the node server

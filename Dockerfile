@@ -10,6 +10,9 @@ WORKDIR $appdir
 RUN apt-get update && apt-get install -y git build-essential
 RUN apt-get clean
 
+# Install node-gyp in build container
+RUN npm install -g node-gyp
+
 COPY startup_container.sh startup.sh
 
 RUN ["chmod", "+x", "/usr/src/app/startup.sh"]
