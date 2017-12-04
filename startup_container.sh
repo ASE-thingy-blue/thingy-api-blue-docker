@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd /usr/src/app/
+
 # Pull current code base from Github
 git init
 git remote add origin https://github.com/ASE-thingy-blue/thingy-api-blue.git

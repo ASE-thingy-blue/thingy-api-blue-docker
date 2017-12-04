@@ -20,4 +20,4 @@ EXPOSE 8080
 USER node
 
 # Start the node server
-CMD ["/usr/src/app/startup.sh"]
+ENTRYPOINT ["/usr/src/app/startup.sh"]
